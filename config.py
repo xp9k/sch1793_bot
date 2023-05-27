@@ -45,5 +45,11 @@ if chat_ids is not None:
 
 
 tmp_path  = os.environ.get("tmp_path") or "tmp"
+if not os.path.isdir(tmp_path):
+    os.makedirs(tmp_path)
 images_path = os.environ.get("images_path") or "images"
+if not os.path.isdir(images_path):
+    os.makedirs(images_path)
 videos_path = os.environ.get("videos_path") or "videos"
+if not os.path.isdir(videos_path):
+    os.makedirs(videos_path)

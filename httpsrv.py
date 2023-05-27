@@ -35,6 +35,8 @@ async def handle_request(reader, writer):
     if file_name == '':
         await quit()
         return
+    
+    fn = '_'.join(file_name.lstrip(config.videos_path + '\\').split('\\')).replace(' ', '_')
 
     if os.path.isfile(file_name):
         with open(file_name, 'rb') as file:

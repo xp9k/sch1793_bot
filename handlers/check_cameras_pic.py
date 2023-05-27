@@ -9,8 +9,6 @@ from config import *
 from helpers.cameras import *
 from loader import router, bot
 
-print(__file__, router)
-
 help_text = \
 """ 
 /campic - Фото с выбранных камер

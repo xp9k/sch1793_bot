@@ -16,8 +16,6 @@ from loader import router, bot
 
 from httpsrv import files
 
-print(__file__, router)
-
 help_text = \
 """ 
 /record - Запись видео с камеры
@@ -133,6 +131,7 @@ async def cams_record(query: CallbackQuery, callback_data: callback_record, bot:
         nowMSK = datetime.now(timezone('Europe/Moscow'))
         path = os.path.join(videos_path, time.strftime("%Y\\%B\\%d"), *cam_path_list)
         filename = nowMSK.strftime(f"{path}\\{file_prefix}_%Y.%m.%d_%H.%M.%S.mkv")
+        # filename = nowMSK.strftime("%H.%M.mkv")
         if ping(ip):
             os.makedirs(path, exist_ok=True)            
             ffmpeg_command = "ffmpeg", "-rtsp_transport", "tcp", "-i", video_url, "-t", f"{rec_time}", "-codec", "copy", filename,

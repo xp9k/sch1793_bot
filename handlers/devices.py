@@ -13,8 +13,6 @@ import os
 
 from loader import router, bot
 
-print(__file__, router)
-
 devices = {
     # inv_number: {
     #     type: str,

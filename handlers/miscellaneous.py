@@ -7,7 +7,6 @@ import config
 from loader import router
 from httpsrv import files
 
-print(__file__, router)
 
 tmp_path = config.tmp_path
 videos_path = config.videos_path 
