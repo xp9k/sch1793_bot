@@ -10,8 +10,6 @@ from config import videos_path
 from loader import router
 from httpsrv import files
 
-print(__file__, router)
-
 folder_to_browse = {}
 
 class callback_browse(CallbackData, prefix='browse'):
